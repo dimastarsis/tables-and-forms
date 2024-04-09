@@ -9,7 +9,88 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <h2>
+            О питомце:
+        </h2>
+        <p>
+            <label for="petType">
+                Выберете вид животного
+                <select name="petType" id="petType">
+                    <option value="rabbit">Кролик</option>
+                    <option value="tiger">Тигр</option>
+                    <option value="pony">Пони</option>
+                    <option value="turtle">Черепаха</option>
+                    <option value="dog">Собака</option>
+                    <option value="cat" selected>Кошка</option>
+                    <option value="hamster">Хомяк</option>
+                    <option value="fish">Рыбка</option>
+                </select>
+            </label>
+        </p>
+
+        <p>
+            <label>
+                <input type="radio" name="gender" value="boy" checked> М
+                <input type="radio" name="gender" value="girl"> Ж
+            </label>
+        </p>
+
+        <p>
+            <label for="eyeColor">
+                Цвет глаз
+                <input type="color" name="eyeColor" id="eyeColor" value="#ffffff">
+            </label>
+        </p>
+
+        <p>
+            <label for="name">
+                Имя
+                <input name="name" minlength="1" id="name" maxlength="50" required placeholder="Шарик">
+            </label>
+        </p>
+
+        <label for="tailLength">
+            Длина хвоста
+            <input type="number" name="tailLength" id="tailLength" placeholder="16" value="16">
+        </label>
+
+        <h2>
+            О вас:
+        </h2>
+        <p>
+            <label for="birthday">
+                Дата рождения
+                <input type="date" name="dateOfBirth" id="birthday" value="1900-01-01">
+            </label>
+        </p>
+
+        <p>
+            <label for="email">
+                Email
+                <input type="email" name="email" id="email" placeholder="pet@pet.com">
+            </label>
+        </p>
+
+        <p>
+            <label for="phone">
+                Телефон
+                <input type="tel" name="phone" id="phone" placeholder="8-777-777-77-77">
+            </label>
+        </p>
+
+        <p>
+            <label for="rules">
+                <input type="checkbox" name="rules" id="rules" value="true" checked> Я согласен с условиями политики конфиденциальности
+            </label>
+        </p>
+
+        <p>
+            <input type="reset" value="Сбросить">
+            <input type="submit">
+        </p>
+
+    </form>
 
 </main>
 </body>
